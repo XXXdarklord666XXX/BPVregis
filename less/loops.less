@@ -1,0 +1,15 @@
+@import "constance.less";
+
+.divloop(@teller) when (@teller > 0) {
+    .divloop(@teller - 1);
+    .vb_div_@{teller} {
+        background-color: @color1(@teller * 10,@teller * 20,@teller * 30);
+        margin: 1em * @teller;
+        padding: 1em * @teller;
+        font-size: 1em * @teller;
+        width: 200px + @teller * 10px;
+        color: @color2;
+    }
+}
+
+.divloop(15);

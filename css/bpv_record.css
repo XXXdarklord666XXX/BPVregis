@@ -1,0 +1,83 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-bpv {
+  max-width: 400px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-bpv .form-bpv-heading,
+.form-bpv .checkbox {
+  margin-bottom: 10px;
+}
+.form-bpv .checkbox {
+  font-weight: normal;
+}
+.form-bpv .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-bpv .form-control:focus {
+  z-index: 2;
+}
+.form-bpv input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-bpv input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-bpv input[id="Address"] {
+    display: inline;
+    width: 305px;
+}
+
+.form-bpv input[id="AddressNumber"] {
+    display: inline;
+    width: 61px;
+}
+
+.form-bpv input[id="City"] {
+    display: inline;
+    width: 286px;
+}
+
+.form-bpv input[id="PostalCode"] {
+    display: inline;
+    width: 80px;
+}
+
+.form-bpv input[id="CompanyName"] {
+    display: inline;
+    width: 256px;
+}
+
+.form-bpv input[id="CompanyNumber"]{
+    display: inline;
+    width: 110px;
+}
+
+.form-bpv input[id="Person"]{
+    display: inline;
+    width: 256px;
+}
+
+.form-bpv input[id="PersonNumber"]{
+    display: inline;
+    width: 110px;
+}
+
+
+

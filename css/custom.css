@@ -1,0 +1,5 @@
+#alert_is_activated, #alert_already_activated, #alert_no_stNumber, #alert_nonexisting_stNumber, 
+#alert_mail_already_sent, #error_id, #error_pw, #error_activate, #succes_record_saved, #error_record_not_saved,
+#error_company_exists ,#no_records_found ,#error_database ,#error_update {
+   display: none;
+}

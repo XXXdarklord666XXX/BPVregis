@@ -1,0 +1,57 @@
+@color1: #0000ff + #00ff00;
+@borderwidth: 10;
+@unit: px;
+//@path: ("../images");
+@image: url("../images/space1.jpg"); 
+
+#content {
+    border: ~"@{borderwidth}@{unit}" solid @color1;
+    background-image: @image;
+    width: 400;
+    height: 400;
+}
+
+@bordercolor: rgba(150, 140, 255, 0,8);
+@borderthickness: 28;
+@linestyle: solid;
+@backgroundcolor: black;
+@fontsize: 4;
+@width: 400;
+@height: 400;
+@color2: lighten(@backgroundcolor, 60%);
+@padding: 0.8em;;
+@font_extension: family;
+
+#divopmaak {
+    border: ~"@{borderthickness}px" @linestyle @bordercolor;
+    width: @width;
+    height: @height;
+    background-color: @backgroundcolor;
+    color: @color2;
+    padding: @padding;
+}
+
+.opmaakdiv(@thickness, @unit, @bordertype, @color) {
+    border: ~"@{thickness}@{unit}" "@{bordertype}" "@{color}";
+}
+
+//dit is the mixins
+#paramixin {
+    //hiet wordt de mixin aangeroepen
+    .opmaakdiv(10, px, solid, pink);
+}
+
+// 3, guarded mixins
+.GuardedMixin(@borderthickness1) when (@borderthickness1 <= 10px) and (@padding <= 1){
+    border: @borderthickness1 solid black;
+    background-color: green;
+} .GuardedMixin(@borderthickness1) when (@borderthickness1 > 10px) and (@padding > 1) {
+    border: @borderthickness1 dashed black;
+    background-color: pink;
+} .GuardedMixin(@_) {
+   color: white; 
+}
+
+#guarded_mixin_example {
+    .GuardedMixin(5px)
+}
